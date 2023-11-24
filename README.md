@@ -1,6 +1,7 @@
 # Piero Angela racconta la tua vita.
 
 Questo è un fork del repo https://github.com/cbh123/narrator pubblicato per la prima volta da Charlie Bholtz su X (Twitter) con questo [post](https://twitter.com/charliebholtz/status/1724815159590293764)
+
 Thank you Charlie for this simple but very fun iteration using OpenAi and Elevelabs APIs
 
 Essendo un repository indirizzato esclusivamente all'utenza italiana ho deciso di tradurre le istruzioni.
@@ -24,26 +25,26 @@ source venv/bin/activate
 Installa le dipendenze:
 `pip install -r requirements.txt`
 
-Se non ce li hai crea un account [OpenAI](https://beta.openai.com/) e [ElevenLabs](https://elevenlabs.io), poi recupera i tuoi auth token. Setta poi le variabili del tuo ambiente locale digitando
+Se ancora non li hai crea un account [OpenAI](https://beta.openai.com/) e [ElevenLabs](https://elevenlabs.io), poi recupera i tuoi auth token. Setta poi le variabili del tuo ambiente locale digitando
 
 ```
 export OPENAI_API_KEY=<token>
 export ELEVENLABS_API_KEY=<eleven-token>
 ```
 
-Make a new voice in Eleven and get the voice id of that voice using their [get voices](https://elevenlabs.io/docs/api-reference/voices) API, or by clicking the flask icon next to the voice in the VoiceLab tab.
+Crea una nuova voce personalizzata in ElevenLabs, copia l'id della voce e setta la variabile d'ambiente per permettere allo script di utilizzarla
 
 ```
 export ELEVENLABS_VOICE_ID=<voice-id>
 ```
 
-## Run it!
+## Eseguilo!
 
-In on terminal, run the webcam capture:
+Apri due finestre del terminale, facendo attenzione ad attivare virtualenv in entrambe. Nella prima esegui lo script per lo screen capture:
 ```bash
 python capture.py
 ```
-In another terminal, run the narrator:
+nella seconda avvia il narratore:
 
 ```bash
 python narrator.py
